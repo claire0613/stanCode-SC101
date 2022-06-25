@@ -20,7 +20,7 @@ game production, data structures, data processing, recursion, and some search al
 
 ### Image processing
  - This is a program that can erase unexpected people on the image by choosing the best pixel between several images in the same sizes.
- - Please use terminal to execute this program and use the directory of images name as params.(os = window) ex. py myPhotoshop.py hoover
+ - Please use terminal to execute this program and use the directory of images name as params. ex. py myPhotoshop.py hoover
 
 ![image](demo/stanCodeshop.png) 
 
@@ -37,7 +37,8 @@ game production, data structures, data processing, recursion, and some search al
 ![image](demo/sieprinski.gif)
 
 ### Boggle game solver
- - This is a program that can quickly find all possible words on any boggle board. (Practicing the concept of Backtracking Algorithms)
+ - This is a program that can quickly find all possible words on any boggle board.\
+ (Practicing the concept of Backtracking Algorithms)
  - Please run boggle.py,then type 4 rows of 4 English letters separated by spaces.
 
 ![image](demo/boggle.png)
