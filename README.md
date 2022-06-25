@@ -1,4 +1,4 @@
-# stanCode SC101 project
+# stanCode SC101 projects
 
 This repository shows my programming projects done during the period of stanCode SC101 course.\
 (more about [stanCode](https://stancode.tw/))
