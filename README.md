@@ -1,6 +1,7 @@
 # stanCode SC101 project
 
-This repository shows my programming projects done during the period of stanCode SC101 course. (more about [stanCode](https://stancode.tw/))
+This repository shows my programming projects done during the period of stanCode SC101 course.
+(more about [stanCode](https://stancode.tw/))
 
 - These small projects strengthen my understanding of the Python language.
 
@@ -11,7 +12,8 @@ game production, data structures, data processing, recursion, and some search al
 
 ## Projects
 ### Breakout game
- - This is a simple breakout game built by campy packages.(Learning the concepts of object-orientation and classes in Python.)
+ - This is a simple breakout game built by campy packages.
+  - Learning the concepts of object-orientation and classes in Python.
  - Please run my_breakout.py to start the game.
 ![image](demo/my_breakout.gif)
 
@@ -32,4 +34,5 @@ game production, data structures, data processing, recursion, and some search al
 
 ### Boggle game solver
  - This is a program that can quickly find all possible words on any boggle board. (Practicing the concept of Backtracking Algorithms)
+ - Please run boggle.py,then type 4 rows of 4 English letters separated by spaces.
 ![image](demo/boggle.png)
