@@ -58,38 +58,36 @@ def find_word(boggle,ans_list):
 	print(f'There are {count[0]} words in total.')
 
 def helper(x,y,ans_list,used_index,current_s,count):
-	if len(current_s)>=4:
-		if current_s in dic_list and current_s not in ans_list:
-			print('Found: ' + current_s)
-			ans_list.append(current_s)
-			count[0]+=1
-			for i in range(-3,4):
-				for j in range(-3,4):
-					new_x, new_y = x + j, y + i
-					if 0 <= new_x < len(boggle) and 0 <= new_y < len(boggle[0]) and (x,y) not in used_index:
-						# Choose
-						current_s += boggle[x][y]
-						used_index.append((x, y))
+	if len(current_s)>=4 and current_s in dic_list and current_s not in ans_list:
+		print('Found: ' + current_s)
+		ans_list.append(current_s)
+		count[0]+=1
+		for i in range(-1,2):
+			for j in range(-1,2):
+				new_x, new_y = x + j, y + i
+				if 0 <= new_x < len(boggle) and 0 <= new_y < len(boggle[0]) and (new_x,new_y) not in used_index:
+					# Choose
+					current_s += boggle[new_x][new_y]
+					used_index.append((new_x, new_y))
 
-						if has_prefix(current_s):
-							helper(new_x, new_y, ans_list, used_index, current_s, count)
-						current_s = current_s[:-1]
-						used_index.pop()
+					if has_prefix(current_s):
+						helper(new_x, new_y, ans_list, used_index, current_s, count)
+					current_s = current_s[:-1]
+					used_index.pop()
 
 	# Recursive case
 	else:
 		for i in range(-1, 2):
 			for j in range(-1, 2):
 				new_x, new_y = x + j, y + i
-				if 0 <= new_x < len(boggle) and 0 <= new_y < len(boggle[0]) and (x,y) not in used_index :
+				if 0 <= new_x < len(boggle) and 0 <= new_y < len(boggle[0]) and (new_x,new_y) not in used_index :
 					# Choose
-					current_s += boggle[x][y]
-					used_index.append((x,y))
+					current_s += boggle[new_x][new_y]
+					used_index.append((new_x,new_y))
 					# Explore
 					if has_prefix(current_s):
 						helper(new_x,new_y,ans_list, used_index, current_s,count)
 					# Unchoose
-
 					current_s = current_s[:-1]
 					used_index.pop()
 
